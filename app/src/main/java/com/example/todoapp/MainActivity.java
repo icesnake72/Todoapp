@@ -16,7 +16,7 @@ import androidx.appcompat.app.AppCompatActivity;
 //AppCompat
 public class MainActivity extends AppCompatActivity {
     public WebView webView;
-    public Context context;
+//    public Context context;
     private MyWebViewClient myWebViewClient;
 
     @SuppressLint("SetJavaScriptEnabled")
@@ -27,17 +27,17 @@ public class MainActivity extends AppCompatActivity {
 
         WebViewClient myWebViewClient = new MyWebViewClient();
 
-        context = this;
+//        context = this;
         webView = findViewById(R.id.main_web_view);
         webView.setWebViewClient(myWebViewClient);
-
 
         WebSettings ws = webView.getSettings();
         ws.setJavaScriptEnabled(true);
         ws.setCacheMode(WebSettings.LOAD_NO_CACHE);
         ws.setMixedContentMode(WebSettings.MIXED_CONTENT_ALWAYS_ALLOW);
 
-        String url = "http://172.30.1.71:5001/";
+        //String url = "http://172.30.1.19:5001/";
+        String url = "http://www.naver.com";
         webView.loadUrl(url);
     }
 
